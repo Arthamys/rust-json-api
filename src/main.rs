@@ -1,3 +1,6 @@
+use rust_json_api::rocket;
+
 fn main() {
-    println!("Hello, world!");
+    rocket()
+        .launch();
 }
