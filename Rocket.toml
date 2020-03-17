@@ -1,0 +1,2 @@
+[global.databases]
+pgdb = { url = "postgres://rocket_api:c0mpl3xp4ssw0rd@localhost:5432/wiki" }
