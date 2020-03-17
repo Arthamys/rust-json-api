@@ -1,0 +1,2 @@
+CREATE DATABASE wiki;
+CREATE ROLE rocket_api WITH LOGIN PASSWORD 'c0mpl3xp4ssw0rd';
