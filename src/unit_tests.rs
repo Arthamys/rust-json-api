@@ -58,16 +58,16 @@ fn insert_new_document() {
 #[cfg(test)]
 fn mock_data(rocket: &rocket::Rocket) {
     use crate::schema::documents;
-    use crate::models::document::NewDocument;
+    use crate::models::NewDocument;
     use diesel::RunQueryDsl;
 
     let db_conn = super::repository::DbConn::get_one(&rocket).expect("could not connect to database");
     clear_documents(&db_conn.0);
     diesel::insert_into(documents::table)
-        .values(NewDocument {title: "First Document".to_string()})
+        .values(NewDocument {title: "First Document"})
         .execute(&db_conn.0).expect("could not insert new document");
     diesel::insert_into(documents::table)
-        .values(NewDocument {title: "Second Document".to_string()})
+        .values(NewDocument {title: "Second Document"})
         .execute(&db_conn.0).expect("could not insert new document");
 }
 

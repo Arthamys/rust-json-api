@@ -6,8 +6,8 @@ pub struct Document {
     pub title: String,
 }
 
-#[derive(Insertable, Serialize, Debug)]
+#[derive(Insertable, Serialize, Deserialize, Debug)]
 #[table_name = "documents"]
-pub struct NewDocument {
-    pub title: String,
+pub struct NewDocument<'a> {
+    pub title: &'a str,
 }

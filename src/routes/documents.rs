@@ -1,5 +1,5 @@
 use crate::repository::{DbConn, documents};
-use rocket_contrib::json::JsonValue;
+use crate::models::NewDocument;
 use crate::error::ApiError;
 
 #[get("/documents")]
