@@ -43,9 +43,9 @@ fn insert_new_document() {
     let db_conn = super::repository::DbConn::get_one(&rocket()).expect("could not connect to database");
     clear_documents(&db_conn.0);
 
-    let response = client.post("/documents/new document")
-        .body("{\"content\":\"This is the content of my latest document\"}")
+    let response = client.post("/documents/new_document")
         .header(ContentType::JSON)
+        .body("{\"content\":\"This is the content of my latest document\"}")
         .dispatch();
     assert_eq!(response.status(), Status::Created);
     assert_eq!(response

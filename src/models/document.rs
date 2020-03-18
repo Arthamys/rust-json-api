@@ -11,3 +11,8 @@ pub struct Document {
 pub struct NewDocument<'a> {
     pub title: &'a str,
 }
+
+#[derive(Deserialize, Debug)]
+pub struct DocumentContent <'a> {
+    pub content: &'a str,
+}

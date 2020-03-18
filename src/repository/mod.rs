@@ -7,3 +7,4 @@ use diesel::pg::PgConnection;
 pub struct DbConn(PgConnection);
 
 pub mod documents;
+pub mod revisions;

@@ -22,6 +22,7 @@ pub fn rocket() -> rocket::Rocket {
             routes![
             routes::hello_world,
             routes::documents::get_all_documents,
+            routes::documents::new_document,
             ])
         .attach(repository::DbConn::fairing())
 }
